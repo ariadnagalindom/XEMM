@@ -23,6 +23,9 @@ import ccxt
 import asyncio
 import ccxt.async_support as ccxt_async
 
+import nest_asyncio
+nest_asyncio.apply()
+
 # --------------------------------------------------------------------------- EXCHANGE TRANSACTIONS FEEs -- # 
 # --------------------------------------------------------------------------------------------------------- #
 
