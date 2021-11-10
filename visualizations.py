@@ -11,6 +11,7 @@
 # --------------------------------------------------------------------------------------------------------- #
 
 # -- Load base packages
+from numpy import tile
 import pandas as pd
 from plotly.subplots import make_subplots
 
@@ -62,4 +63,5 @@ def graficas(df, symbol):
     fig.add_trace(go.Scatter(x=df_k.timeStamp, y=df_k.vwap,mode='lines', name='kraken vwap'),row=2,col=3)
     fig.add_trace(go.Scatter(x=df_b.timeStamp, y=df_b.vwap,mode='lines', name='bitfinex vwap'),row=2,col=3)
     
+    fig.update_layout(height=600, width=900, title_text=symbol)
     return fig.show()
